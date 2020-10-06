@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700");
+
+:root {
+  /* TODO: clean up these */
+  --rivero-lightblue: #1498a5; /* highlight only */
+  --rivero-mediumblue: #007c9d; /* can be used for text on white background */
+
+  --rivero-blue: #004e69;
+
+  --rivero-darkblue: #0e3449;
+  --rivero-extradarkblue: #07212f; /* mostly for text */
+
+  --transparent-blue: #07212fe6;
+
+  /* BASIC COLORS */
+  --primary-color: var(--rivero-blue);
+  --highlight-color: var(--rivero-blue);
+  --warning-color: #faae48;
+  --error-color: #b50000;
+
+  /* GREYS */
+  --grey-1: #f7f7f7;
+  --grey-2: #ececeb;
+  --grey-3: #bcbcbb;
+  --grey-4: #595959;
+  --grey-5: #292929;
+
+  /* TEXT */
+  --text-color-light: var(--grey-4);
+  --text-color: var(--grey-5);
+  --text-color-blue: var(--rivero-extradarkblue);
+
+  /* BORER */
+  --default-border: 1px solid var(--grey-2);
+  --default-darken-border: 1px solid var(--grey-3);
+
+  /* OTHER */
+  --panel-shadow: 0px 0px 14px 0 rgba(0, 0, 0, 0.1);
+  /* TODO: borders, backgrounds */
+
+  height: 100%;
+
+  color: var(--text-color);
+
+  font-family: "Open Sans", sans-serif;
+
+  background-color: var(--grey-1);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.visuallyHidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+}
+
+/* Reset default element styles */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+/* Global default sizing for svg icons */
+svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+/* Remove browser focus styles */
+
+.js-focus-visible :focus.focus-visible {
+  outline: 1px dashed var(--primary-color);
+}
+
+/* firefox specific */
+/* stylelint-disable-next-line */
+::-moz-focus-inner {
+  border: none;
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.no-events {
+  pointer-events: none;
+}
